@@ -35,7 +35,7 @@ end
 
 # description
 book['Description'] = nokogiri.at_css('div#description').text.strip unless nokogiri.at_css('div#description').nil?
-book['Description'] = nokogiri.at_css('div#descrption').text.strip unless nokogiri.at_css('div#description').nil?
+book['Description'] = nokogiri.at_css('div#descrption').text.strip unless nokogiri.at_css('div#descrption').nil?
 book['Description'] = nokogiri.at_css('div#descrption span[style="display:none"]').text.strip unless nokogiri.at_css('div#descrption span[style="display:none"]').nil?
 book['Description'] = nokogiri.at_css('div#description span[style="display:none"]').text.strip unless nokogiri.at_css('div#description span[style="display:none"]').nil?
 
