@@ -34,11 +34,10 @@ nominee_node.each do |nom|
 end
 
 # description
-if nokogiri.at_css('div#description span[style="display:none"]')
-    book['Description'] = nokogiri.at_css('div#description span[style="display:none"]').strip
-else
-    book['Description'] = nokogiri.at_css('div#description').text.strip
-end
+book['Description'] = nokogiri.at_css('div#description').text.strip unless nokogiri.at_css('div#description').nil?
+book['Description'] = nokogiri.at_css('div#descrption').text.strip unless nokogiri.at_css('div#description').nil?
+book['Description'] = nokogiri.at_css('div#descrption span[style="display:none"]').text.strip unless nokogiri.at_css('div#descrption span[style="display:none"]').nil?
+book['Description'] = nokogiri.at_css('div#description span[style="display:none"]').text.strip unless nokogiri.at_css('div#description span[style="display:none"]').nil?
 
 
 # specify the collection where this record will be stored
