@@ -6,7 +6,7 @@ books.each do |book|
     url = "https://www.goodreads.com" + book.at_css('a')["href"]
     pages << {
           url: url,
-          page_type: 'bookss',
+          page_type: 'books',
           vars: {url: url},
           fetch_type: "browser"
     }
