@@ -14,7 +14,7 @@ parsers:
 exporters:
   - exporter_name: books_json # Must be unique
     exporter_type: json
-    collection: products
+    collection: books
     write_mode: pretty_array # can be `line`,`pretty`, `pretty_array`, or `array`
     offset: 0 # offset to where the exported record will start from
     order: desc # can be ascending `asc` or descending `desc`
@@ -22,7 +22,7 @@ exporters:
 
   - exporter_name: books_csv
     exporter_type: csv
-    collection: products
+    collection: books
     start_on_job_done: true
     fields:
       - header: "gid"
